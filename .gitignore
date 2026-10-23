@@ -1,0 +1,3 @@
+ # Ignore raw CSV data files
+data/raw/*.csv
+data/raw/*.zip
