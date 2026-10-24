@@ -16,7 +16,7 @@ A Data Warehouse project built using SQL Server to store, process, and analyze b
 
 ## 4. How to Run
 1. Open SSMS and connect to `localhost`.
-2. Run `sql/ddl/01_create_bronze_tables.sql` to create database `dm_course` and load data.
+2. Run `sql/ddl/01_init_database.sql` to create database `dm_course` and load data.
 3. Run `sql/quality/01_data_quality_checks.sql` to execute the data quality report.
 
 ## 5. Quality Report Summary (Unit 1)
