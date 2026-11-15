@@ -19,6 +19,12 @@ A Data Warehouse project built using SQL Server to store, process, and analyze b
 2. Run `sql/ddl/01_init_database.sql` to create database `dm_course` and load data.
 3. Run `sql/quality/01_data_quality_checks.sql` to execute the data quality report.
 
+### Silver Layer 
+1. Run `sql/ddl/02_init_silver_layer.sql`.
+2. Run `sql/dml/01_populate_silver_layer.sql`.
+3. Run `sql/quality/02_silver_data_quality_checks.sql`.
+4. Review `docs/silver_layer_audit_report.md` and `docs/silver_layer_data_dictionary.md`.
+
 ## 5. Quality Report Summary (Unit 1)
 * **Air Temperature:** 99.96% complete (only 55 missing values).
 * **Cloud Coverage:** 50.51% complete.
