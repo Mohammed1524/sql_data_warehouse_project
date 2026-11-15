@@ -41,7 +41,13 @@ Run `sql/quality/02_silver_data_quality_checks.sql` after loading. Review:
 - Conflicting source records excluded during loading.
 
 ## Execution status
-**Not yet executed/verified in SQL Server.** Do not report row counts or claim that all checks passed until the scripts have been run against the actual `dm_course` database and the results have been reviewed.
+**Executed and verified in SQL Server (`dm_course`, 2026-11-15).**
+All three scripts (`02_init_silver_layer.sql`, `01_populate_silver_layer.sql`, `02_silver_data_quality_checks.sql`) completed without errors:
+- `silver.building_metadata`: 1,449 rows
+- `silver.weather_train`: 139,773 rows
+- `silver.train`: 20,216,100 rows
+- Duplicate primary keys, negative meter readings, missing air temperature after imputation, orphan train rows, invalid time features, conflicting raw records, excluded missing-building rows, and unmatched weather sites: **0**.
+
 
 ## Important source compatibility note
 Before execution, compare the source column names and data types in `raw.building_metadata`, `raw.weather_train`, and `raw.train` with the Bronze DDL. The scripts assume the source columns are named as referenced in the SQL files. Adjust them if the actual Bronze schema differs.
